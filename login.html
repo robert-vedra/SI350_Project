@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="login-page">
+  <nav class='navbar'>
+  <ul class='nav-list'>
+    <li><a href='index.html' class='nav-link'>Home</a></li>
+    <li><a href='schedule.html' class='nav-link'>Schedule</a></li>
+    <li><a href='requestReport.php' class='nav-link'>Get Report</a></li>
+    <li><a href='registration.html' class='nav-link'>Register</a></li>
+    <li><a href='login.html' class='nav-link'>Login</a></li>
+    <li><a href='logout.php' class='nav-link'>Logout</a></li>
+  </ul>
+</nav>
+
+  <div class="login-container">
+    <h1>Login to Your Account</h1>
+
+    <!-- Error message injected via JavaScript -->
+    <div id="error-container"></div>
+
+    <form method="post" action="login.php">
+      <label for="username">Username (email):</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <input type="submit" value="Login">
+      <input type="reset" value="Reset">
+    </form>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("error") === "1") {
+      document.getElementById("error-container").innerHTML = "<p class='error-message'>⚠️ Error: Invalid username or password.</p>";
+    }
+  </script>
+</body>
+</html>

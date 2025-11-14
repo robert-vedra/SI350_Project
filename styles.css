@@ -1,0 +1,163 @@
+/* Kephart Styles from Lab07 Website */
+
+
+/*General page styles*/
+body {
+  background-color: #f0f8ff;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+
+/*styling for the headers*/
+h1, h3 {
+  text-align: center;
+  color: navy;
+}
+
+/* styling for tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid #000;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+/*reusable classes/attributes */
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.card { /*this one is useful for making little boxes*/
+  border: 2px solid navy;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #e6f2ff;
+  float: left;
+  width: 45%;
+}
+
+
+
+/* links */
+a {
+  text-decoration: underline;
+  color: darkblue;
+}
+
+a:hover {
+  text-decoration-style: wavy;
+}
+
+/* LOGIN PAGE STYLES */
+/* Note- used ChatGPT to help come up with some these */
+
+body.login-page {
+  background-color: #f5faff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h1 {
+  text-align: center;
+  color: navy;
+}
+
+.login-container label {
+  font-weight: bold;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-container input[type="submit"],
+.login-container input[type="reset"] {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: navy;
+  color: white;
+  cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover,
+.login-container input[type="reset"]:hover {
+  background-color: #004080;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+/* navbar stuff, note that a significant amount of AI was used here*/
+
+/* navbar container */
+.navbar {
+  background-color: navy;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3); /*adds a shadow below the navbar, this was an idea from AI*/
+  position: sticky; /*makes it stick to the top when you scroll*/
+  top: 0; /*makes it stick to the top when you scroll*/
+  font-family: Arial, sans-serif;
+}
+
+/*the list insidethe navbar */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  align-items: center;
+}
+
+/*each actual list item */
+.nav-list li {
+  margin: 0 15px;
+}
+
+/*the physical links themselves, note that AI was heavily relied on to make this work */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
