@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,14 +25,14 @@
   </ul>
 </nav>
 
-<?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
+<!-- <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?> -->
 <div class="search-container" style="margin: 20px auto; text-align: center;">
   <form action="searchResults.php" method="GET">
     <input type="text" name="team" placeholder="Search for a team..." style="width: 60%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
     <input type="submit" value="Search" style="padding: 10px 20px; background-color: navy; color: white; border: none; border-radius: 5px; cursor: pointer;">
   </form>
 </div>
-<?php endif; ?>
+<!-- <?php endif; ?> -->
 
 <h1 class="highlight">Welcome to the USNA Club Sports Database!</h1>
 <h3>Supporting Midshipmen Athletics Across the Yard</h3>
@@ -76,7 +75,7 @@
           <tr><th>Team</th><th>Captain</th><th>Practice Times</th><th>Next Competition</th></tr>
         </thead>
         <tbody>
-          <tr><td>Triathlon Club</td><td>1/C Johnson</td><td>MWF 0530</td><td>Army-Navy Tri, Apr 12</td></tr>
+          <tr><td>Triathlon Club</td><td>1/C Wong</td><td>MWF 0530</td><td>Army-Navy Tri, Apr 26</td></tr>
         </tbody>
       </table>
     </div>
