@@ -1,36 +1,45 @@
 <?php
 session_start();
 
-$username = $_POST['username'];
-$password = $_POST['password'];
-
+$username = trim($_POST['username']);
+$password = trim($_POST['password']);
 
 //check if LOG.txt exists
 if (file_exists('LOG.txt')) {
+
     //open the file for reading
     $file = fopen('LOG.txt', 'r');
 
     if ($file) {
-        // Skip header line
+
+        //skip the header line
         fgets($file);
 
         while (($line = fgets($file)) !== false) {
+
             //get each line
             $fields = explode("\t", trim($line));
 
-            //check username and password match
-            if ($fields[1] === $username) {
-                if ($fields[3] === $password) {
-                    session_start();
+            //check username match (case-insensitive)
+            if (strcasecmp($fields[1], $username) === 0) {
+
+                //check password match
+                if ($fields[2] === $password) {
+
+                    $_SESSION['loggedin'] = true;
                     $_SESSION['username'] = $username;
-                    header("Location: requestReport.php");
+
+                    header("Location: index.php");
                     exit;
                 }
             }
-            
         }
-        header("Location: login.html?error=1");
-        sleep(1);
-        exit;
+
+        fclose($file);
     }
 }
+
+//login failed
+header("Location: login.php?error=1");
+exit;
+?>

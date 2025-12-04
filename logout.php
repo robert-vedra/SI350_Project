@@ -8,16 +8,9 @@
   <title>Logout</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<nav class='navbar'>
-  <ul class='nav-list'>
-    <li><a href='index.html' class='nav-link'>Home</a></li>
-    <li><a href='schedule.html' class='nav-link'>Schedule</a></li>
-    <li><a href='requestReport.php' class='nav-link'>Get Report</a></li>
-    <li><a href='registration.html' class='nav-link'>Register</a></li>
-    <li><a href='login.html' class='nav-link'>Login</a></li>
-    <li><a href='logout.php' class='nav-link'>Logout</a></li>
-  </ul>
-</nav>
+
+<?php include 'navbar.php'; ?>
+
 
 <?php
 session_start();
@@ -29,13 +22,13 @@ if (isset($_SESSION['username'])) {
     
     echo "<p>You have been logged out successfully.</p>";
     echo "<p><a href='login.html'>Click here to login again</a></p>";
-    echo "<p><a href='index.html'>Click here to return to the main page</a></p>";
+    echo "<p><a href='index.php'>Click here to return to the main page</a></p>";
    
 } else {
     //user not logged in, show error and link to login
     echo "<p>Error: You are not logged in.</p>";
     echo "<p><a href='login.html'>Click here to login</a></p>";
-    echo "<p><a href='index.html'>Click here to return to the main page</a></p>";
+    echo "<p><a href='index.php'>Click here to return to the main page</a></p>";
 
 }
 ?>
