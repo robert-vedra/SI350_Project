@@ -40,11 +40,13 @@ if (file_exists($filename)) {
 </head>
 
 
-<!-- A lot of these classes were gotten from chat with some bootstrap library i replaced with styles.css above - need to change them -->$_COOKIE
+<!-- A lot of these classes were gotten from chat with some bootstrap library i replaced with styles.css above - need to change them -->
 <body class="container mt-4">
 
 <h2>Search Results for "<?php echo htmlspecialchars($searchTerm); ?>"</h2>
 <a href="index.php" class="btn btn-secondary btn-sm mb-3">Back to Home</a>
+<br>
+<br>
 
 <?php if (empty($searchTerm)): ?>
     <div class="alert alert-warning">Please enter a search term.</div>
@@ -63,7 +65,6 @@ if (file_exists($filename)) {
         <tbody>
             <?php foreach ($results as $r): ?>
             <tr>
-                // display results 
                 <td><?php echo htmlspecialchars($r['team']); ?></td>
                 <td><?php echo htmlspecialchars($r['captain']); ?></td>
                 <td><?php echo htmlspecialchars($r['practice']); ?></td>
