@@ -30,10 +30,10 @@
   <div class="col-md-6">
     <p>This database supports:</p>
     <ul>
-      <li>Club Team Management ⚓</li>
-      <li>Competition Scheduling 🗓️</li>
-      <li>Roster & Eligibility Tracking 📋</li>
-      <li>Performance & Stats Recording 🏅</li>
+      <li>Club Team Management</li>
+      <li>Competition Scheduling</li>
+      <li>Roster & Eligibility Tracking</li>
+      <li>Performance & Stats Recording</li>
     </ul>
   </div>
 </div>
