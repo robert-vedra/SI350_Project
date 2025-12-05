@@ -10,10 +10,12 @@ if (session_status() === PHP_SESSION_NONE) {
     <li><a href="schedule.php" class="nav-link">Schedule</a></li>
     <li><a href="registration.php" class="nav-link">Register</a></li>
     <li><a href="statistics.php" class="nav-link">Statistics</a></li>
+    <li><a href="about.php" class="nav-link">About</a></li>
+    <li><a href="admin.php" class="nav-link">Admin</a></li>
 
     <!-- Show login/profile links based on session status -->
     <?php if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true): ?>
-        <li><a href="login.php" class="nav-link">Login</a></li>
+        <li><a href="login.html" class="nav-link">Login</a></li>
 
     <?php else: ?>
         <li><a href="profile.php?user=<?php echo urlencode($_SESSION['username']); ?>" class="nav-link">Profile</a></li>
