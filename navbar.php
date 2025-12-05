@@ -11,6 +11,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <li><a href="registration.php" class="nav-link">Register</a></li>
     <li><a href="statistics.php" class="nav-link">Statistics</a></li>
     <li><a href="about.php" class="nav-link">About</a></li>
+    <li><a href="admin.php" class="nav-link">Admin</a></li>
 
     <!-- Show login/profile links based on session status -->
     <?php if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true): ?>

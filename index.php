@@ -7,6 +7,15 @@
   <meta name="author" content="MIDN Database Team">
   <title>USNA Club Sports</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+  table caption {
+    font-size: 24px; 
+    font-weight: bold; 
+    padding-bottom: 10px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+  }
+  </style>
 </head>
 
 <body>
@@ -52,18 +61,54 @@
 </div>
 
 <div style="clear: both;"></div>
+<?php
+// Read the clubs.txt file
+$clubs = [];
+
+// Check if the file exists
+if (file_exists('clubs.txt')) {
+    $file = fopen('clubs.txt', 'r');
+
+    // Loop through each line in the file
+    while (($line = fgets($file)) !== false) {
+        // Split the line by '|' and trim any extra spaces
+        $parts = array_map('trim', explode('|', $line));
+        
+        // Add the club details to the $clubs array
+        $clubs[] = [
+            'team' => $parts[0],
+            'captain' => $parts[1],
+            'practice' => $parts[2],
+            'competition' => $parts[3]
+        ];
+    }
+
+    fclose($file);
+}
+
+// Randomly select a club
+$random_club = $clubs[array_rand($clubs)];
+?>
+
+
+
 
 <!-- Featured club of the week table -->
 <div class="row">
   <div class="seven columns">
     <div id="initialtable">
       <table>
-        <caption style="caption-side: top; text-align: center;">Featured Club of the Week</caption>
+        <caption style="caption-side: top; text-align: center;">Featured Club!</caption>
         <thead>
           <tr><th>Team</th><th>Captain</th><th>Practice Times</th><th>Next Competition</th></tr>
         </thead>
         <tbody>
-          <tr><td>Triathlon Club</td><td>1/C Wong</td><td>MWF 0530</td><td>Army-Navy Tri, Apr 26</td></tr>
+          <tr>
+            <td><?php echo $random_club['team']; ?></td>
+            <td><?php echo $random_club['captain']; ?></td>
+            <td><?php echo $random_club['practice']; ?></td>
+            <td><?php echo $random_club['competition']; ?></td>
+          </tr>
         </tbody>
       </table>
     </div>
