@@ -1,6 +1,6 @@
 <Files "admin.php">
     AuthType Basic
     AuthName "Admin Area"
-    AuthUserFile /home/username/.htpasswd
+    AuthUserFile /home/mids/m266558/public_html/SI350/Project/SI350_Project/.htpasswd
     Require user admin
 </Files>
