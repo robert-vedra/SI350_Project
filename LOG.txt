@@ -1,2 +1,3 @@
 Name	Email	Password	Company	ClassYear	Position	Interests	AdditionalInfo
 T Kep	m263306@usna.edu	Password	1st Company	1/C	na	Running	none
+Reese Dalzell	m261428@usna.edu	rpd	5th Company	1/C	Played hockey alot	Running,Strength Training,Team Sports	
