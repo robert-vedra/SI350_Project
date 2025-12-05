@@ -2,16 +2,9 @@
 //start the session to track user login status
 session_start();
 
-echo "<nav class='navbar'>
-  <ul class='nav-list'>
-    <li><a href='index.html' class='nav-link'>Home</a></li>
-    <li><a href='schedule.html' class='nav-link'>Schedule</a></li>
-    <li><a href='requestReport.php' class='nav-link'>Get Report</a></li>
-    <li><a href='registration.html' class='nav-link'>Register</a></li>
-    <li><a href='login.html' class='nav-link'>Login</a></li>
-    <li><a href='logout.php' class='nav-link'>Logout</a></li>
-  </ul>
-</nav>";
+
+include 'navbar.php'; 
+
 
 //check if the user is logged in, if not, then redirect them to login page with an error message
 if (!isset($_SESSION['username'])) {

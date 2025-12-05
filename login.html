@@ -6,13 +6,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
+<!--old navbar because it is an html page still, changing to php caused issues-->
 <body class="login-page">
   <nav class='navbar'>
   <ul class='nav-list'>
-    <li><a href='index.html' class='nav-link'>Home</a></li>
-    <li><a href='schedule.html' class='nav-link'>Schedule</a></li>
+    <li><a href='index.php' class='nav-link'>Home</a></li>
+    <li><a href='schedule.php' class='nav-link'>Schedule</a></li>
     <li><a href='requestReport.php' class='nav-link'>Get Report</a></li>
-    <li><a href='registration.html' class='nav-link'>Register</a></li>
+    <li><a href='registration.php' class='nav-link'>Register</a></li>
     <li><a href='login.html' class='nav-link'>Login</a></li>
     <li><a href='logout.php' class='nav-link'>Logout</a></li>
   </ul>
@@ -21,7 +22,7 @@
   <div class="login-container">
     <h1>Login to Your Account</h1>
 
-    <!-- Error message injected via JavaScript -->
+    <!--error message injected via JavaScript -->
     <div id="error-container"></div>
 
     <form method="post" action="login.php">
@@ -36,10 +37,11 @@
     </form>
   </div>
 
+  <!-- the following detects error parameter in URL and displays error message -->
   <script>
     const params = new URLSearchParams(window.location.search);
     if (params.get("error") === "1") {
-      document.getElementById("error-container").innerHTML = "<p class='error-message'>⚠️ Error: Invalid username or password.</p>";
+      document.getElementById("error-container").innerHTML = "<p class='error-message'>Error: Invalid username or password.</p>";
     }
   </script>
 </body>
