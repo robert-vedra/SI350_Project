@@ -72,9 +72,7 @@
 
 <footer class="container mt-4">
   <div class="row text-center">
-    <div class="col-12 mb-2">
-      Return to the <a href="index.php">homepage</a>
-    </div>
+    <br>
     <div class="col-12 mb-3">
       <a href="mailto:clubsports@usna.edu" class="btn btn-primary btn-sm">Email Admin</a>
     </div>
