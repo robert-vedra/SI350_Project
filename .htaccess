@@ -1,0 +1,6 @@
+<Files "admin.php">
+    AuthType Basic
+    AuthName "Admin Area"
+    AuthUserFile /home/username/.htpasswd
+    Require user admin
+</Files>
